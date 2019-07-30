@@ -1,5 +1,8 @@
 let time = 0;
-const delay = 100;
+let numLoop = 0;
 let pattern = ['\r|   ', '\r/   ', '\r-   ', '\r\\   '];
-for (let i of pattern) setTimeout(() => process.stdout.write(i), time += delay);
+while ( numLoop < 3) {
+for (let i of pattern) setTimeout(() => process.stdout.write(i), time += 100);
+++numLoop;
+}
 setTimeout(() => process.stdout.write('\n'), time);
